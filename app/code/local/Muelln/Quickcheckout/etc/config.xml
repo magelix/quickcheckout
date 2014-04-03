@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Muelln_Quickcheckout>
+            <version>0.1.0</version>
+        </Muelln_Quickcheckout>
+    </modules>
+    <global>
+        <models>
+            <muelln_quickcheckout>
+                <class>Muelln_Quickcheckout_Model</class>
+                <resourceModel>muelln_quickcheckout_resource</resourceModel>
+            </muelln_quickcheckout>
+            <muelln_quickcheckout_resource>
+                <class>Muelln_Quickcheckout_Model_Resource</class>
+            </muelln_quickcheckout_resource>
+        </models>
+        <blocks>
+            <muelln_quickcheckout>
+                <class>Muelln_Quickcheckout_Block</class>
+            </muelln_quickcheckout>
+        </blocks>
+        <helpers>
+            <muelln_quickcheckout>
+                <class>Muelln_Quickcheckout_Helper</class>
+            </muelln_quickcheckout>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <Muelln_Quickcheckout_Checkout before="Mage_Checkout">Muelln_Quickcheckout_Checkout</Muelln_Quickcheckout_Checkout>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
+        <layout>
+            <updates>
+                <muelln_quickcheckout>
+                    <file>muelln_quickcheckout.xml</file>
+                </muelln_quickcheckout>
+            </updates>
+        </layout>
+    </frontend>
+</config>

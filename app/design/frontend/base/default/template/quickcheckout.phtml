@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: juergen
+ * Date: 03.04.14
+ * Time: 08:48
+ * add a quick cheout button before the addlinks
+ */
+?>
+<?php $_product = $this->getProduct(); ?>
+<?php $_quick_url = $this->helper('muelln_quickcheckout')->getQuickUrl($_product);?>
+<?php $buttonTitle = $this->__('Quick Checkout'); ?>
+<?php if($_product->isSaleable()): ?>
+    <div class="add-to-cart">
+        <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this, '<?php echo $_quick_url ?>')"><span><span><?php echo $buttonTitle ?></span></span></button>
+        <?php echo $this->getChildHtml('', true, true) ?>
+    </div>
+<?php endif; ?>
+
+

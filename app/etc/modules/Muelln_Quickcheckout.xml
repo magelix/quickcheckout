@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Muelln_Quickcheckout>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Muelln_Quickcheckout>
+    </modules>
+</config>
